@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "898702203652",
+    "project_id": "recipeshareap",
+    "storage_bucket": "recipeshareap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898702203652:android:251067c95aa168ce3d8e51",
+        "android_client_info": {
+          "package_name": "com.example.recipe_share_cooking_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ29dpNRPjScls2YGaN_vvhxM899en9GU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
