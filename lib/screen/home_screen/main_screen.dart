@@ -1,18 +1,21 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:recipe_share_cooking_app/screen/share_recipe/recipe_detail_screen.dart';
 
+// ignore: must_be_immutable
 class MainScreen extends StatelessWidget {
   final String searchQuery;
 
-  const MainScreen({Key? key, required this.searchQuery}) : super(key: key);
+  MainScreen({Key? key, required this.searchQuery}) : super(key: key);
+
+  late String userUid = FirebaseAuth.instance.currentUser!.uid;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-                backgroundColor: Color.fromARGB(255, 232, 228, 228),
-
+        backgroundColor: Color.fromARGB(255, 232, 228, 228),
         title: Text('Search Results: $searchQuery'),
       ),
       body: StreamBuilder(
@@ -50,9 +53,7 @@ class MainScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => RecipeDetailScreen(
-                        recipeId: recipe.id,
-                        userUid: '',
-                      ),
+                          recipeId: recipe.id, userUid: userUid),
                     ),
                   );
                 },
