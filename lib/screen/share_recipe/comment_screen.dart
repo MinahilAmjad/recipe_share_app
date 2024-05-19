@@ -251,7 +251,6 @@ class _CommentScreenState extends State<CommentScreen> {
       final User? user = FirebaseAuth.instance.currentUser;
       if (user != null) {
         try {
-          // Fetch user data from Firestore
           final DocumentSnapshot userDataSnapshot = await FirebaseFirestore
               .instance
               .collection('profiles')
@@ -262,7 +261,6 @@ class _CommentScreenState extends State<CommentScreen> {
             final String username = userData['name'] ?? 'Unknown';
             final String imageUrl = userData['imageUrl'] ?? '';
             final String recipeId = widget.recipeId;
-            // Save the comment to Firestore
             final String id =
                 FirebaseFirestore.instance.collection('comments').doc().id;
             await FirebaseFirestore.instance
@@ -333,7 +331,7 @@ class Comment {
 
   factory Comment.fromMap(Map<String, dynamic> map) {
     final String id = map['id'] ?? '';
-    final String recipeId = map['recipeId'] ?? ''; // Add this field
+    final String recipeId = map['recipeId'] ?? '';
     return Comment(
       id: id,
       userUid: map['userUid'] ?? '',
