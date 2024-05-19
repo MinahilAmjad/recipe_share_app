@@ -180,7 +180,6 @@ class _ShareRecipeScreenState extends State<ShareRecipeScreen> {
               onChanged: (value) {
                 setState(() {
                   _selectedDifficultyLevel = value!;
-                  _difficultyLevelController.text = value;
                 });
               },
               decoration: InputDecoration(
@@ -191,7 +190,7 @@ class _ShareRecipeScreenState extends State<ShareRecipeScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 16.0),
+
             const SizedBox(height: 16.0),
             //cuisine type
             DropdownButtonFormField<String>(
