@@ -55,54 +55,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       });
   }
 
-  // Future<void> _saveProfile() async {
-  //   try {
-  //     // Check if previous profile exists
-  //     final previousProfileDoc = await FirebaseFirestore.instance
-  //         .collection('profiles')
-  //         .doc(_currentUser.uid)
-  //         .get();
-
-  //     // Delete previous profile if it exists
-  //     if (previousProfileDoc.exists) {
-  //       await previousProfileDoc.reference.delete();
-  //     }
-
-  //     // Upload image and get download URL if image is picked
-  //     String? imageUrl;
-  //     if (_pickedImage != null) {
-  //       imageUrl = await uploadImageAndGetDownloadURL(_pickedImage!);
-  //       if (imageUrl == null) {
-  //         Fluttertoast.showToast(msg: 'Failed to upload image');
-  //         return;
-  //       }
-  //     }
-
-  //     // Save new profile data
-  //     final profileData = {
-  //       'name': _nameController.text,
-  //       'bio': _bioController.text,
-  //       'website': _websiteController.text,
-  //       'birthday': _selectedDate,
-  //       'gender': _selectedGender,
-  //       'imageUrl': imageUrl,
-  //     };
-
-  //     await FirebaseFirestore.instance
-  //         .collection('profiles')
-  //         .doc(_currentUser.uid)
-  //         .set(profileData);
-
-  //     // Update UserProvider data
-
-  //     ScaffoldMessenger.of(context)
-  //         .showSnackBar(SnackBar(content: Text('Profile saved successfully')));
-  //   } catch (error) {
-  //     print('Failed to save profile: $error');
-  //     ScaffoldMessenger.of(context).showSnackBar(
-  //         SnackBar(content: Text('Failed to save profile: $error')));
-  //   }
-  // }
+  
   Future<void> _saveProfile() async {
     try {
       // Check if previous profile exists
@@ -209,6 +162,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+                backgroundColor: Color.fromARGB(255, 232, 228, 228),
+
         title: Text(' Edit Profile'),
         actions: [
           IconButton(
