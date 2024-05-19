@@ -11,6 +11,8 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+                backgroundColor: Color.fromARGB(255, 232, 228, 228),
+
         title: Text('Search Results: $searchQuery'),
       ),
       body: StreamBuilder(
