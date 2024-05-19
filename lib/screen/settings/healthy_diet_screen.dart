@@ -44,6 +44,8 @@ class HealthyDietScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+                backgroundColor: Color.fromARGB(255, 232, 228, 228),
+
         title: Text('Healthy Diet Tips'),
       ),
       body: SingleChildScrollView(
