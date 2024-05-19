@@ -14,7 +14,7 @@ class RateAppScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 242, 240, 240),
+        backgroundColor: Color.fromARGB(255, 232, 228, 228),
         elevation: 0,
         title: Text(
           'Rate App',
