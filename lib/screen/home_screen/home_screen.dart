@@ -28,6 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 242, 240, 240),
         title: Text('HomeScreen'),
+                automaticallyImplyLeading: false,
+
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
