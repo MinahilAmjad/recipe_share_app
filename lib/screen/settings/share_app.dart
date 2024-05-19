@@ -25,7 +25,7 @@ class ShareAppScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 232, 228, 228),
         elevation: 0,
         title: Text(
           'Share App',
