@@ -7,6 +7,8 @@ class Recipe_Creationfaq extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+                backgroundColor: Color.fromARGB(255, 232, 228, 228),
+
         title: Text('Recipe Sharing FAQ'),
       ),
       body: Padding(
